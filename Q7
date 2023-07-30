@@ -1,0 +1,23 @@
+def print_permutations(string, start, end):
+    if start == end:
+        print(''.join(string))
+    else:
+        for i in range(start, end + 1):
+            string[start], string[i] = string[i], string[start]
+            print_permutations(string, start + 1, end)
+            string[start], string[i] = string[i], string[start]  # Backtrack
+
+def all_permutations(S):
+    n = len(S)
+    string = list(S)
+    print_permutations(string, 0, n - 1)
+
+# Test the function with the examples
+S1 = "ABC"
+S2 = "XY"
+
+print("Permutations of 'ABC':")
+all_permutations(S1)
+
+print("\nPermutations of 'XY':")
+all_permutations(S2)

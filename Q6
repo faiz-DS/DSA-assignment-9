@@ -1,0 +1,9 @@
+def nth_term_of_ap(a, d, N):
+    return a + (N - 1) * d
+
+# Test the function with the examples
+a1, d1, N1 = 2, 1, 5
+a2, d2, N2 = 5, 2, 10
+
+print(nth_term_of_ap(a1, d1, N1))  # Output: 6
+print(nth_term_of_ap(a2, d2, N2))  # Output: 23
